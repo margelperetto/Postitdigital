@@ -6,7 +6,7 @@ Utiliza banco de dados H2 embarcado, Maven, JPA Hibernate, Java Swing...
 A coisa é simples, tipo isso:
 ![alt text](https://github.com/margelperetto/postitdigital/blob/master/screenshot.JPG "ScreenShot")
 
-##Para rodar:
+## Para rodar
 ```
 $ git clone [URL]
 $ mvn package
