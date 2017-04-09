@@ -24,8 +24,8 @@ import br.com.margel.postitdigital.modelos.Nota;
 import net.miginfocom.layout.CC;
 import net.miginfocom.layout.LC;
 import net.miginfocom.swing.MigLayout;
-import br.com.margel.postitdigital.visualizacao.componentes.MoveComponentListener;
-import br.com.margel.postitdigital.visualizacao.img.ImgUtils;
+import br.com.margel.postitdigital.visualizacao.utilitarios.ImgUtils;
+import br.com.margel.postitdigital.visualizacao.utilitarios.MoveComponentListener;
 
 @SuppressWarnings("serial")
 public class JFCriarNota extends JFrame{
@@ -56,7 +56,7 @@ public class JFCriarNota extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		screenSize = getToolkit().getScreenSize();
-		setLocation(screenSize.width-getWidth()-10, screenSize.height-getHeight()-70);
+		setLocation(screenSize.width-getWidth()-10, screenSize.height-getHeight()-50);
 		MoveComponentListener.install(this);
 		
 		dialogs.add(this);

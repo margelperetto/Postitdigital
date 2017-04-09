@@ -25,8 +25,8 @@ import br.com.margel.postitdigital.modelos.Nota;
 import net.miginfocom.layout.CC;
 import net.miginfocom.layout.LC;
 import net.miginfocom.swing.MigLayout;
-import br.com.margel.postitdigital.visualizacao.componentes.MoveComponentListener;
-import br.com.margel.postitdigital.visualizacao.img.ImgUtils;
+import br.com.margel.postitdigital.visualizacao.utilitarios.ImgUtils;
+import br.com.margel.postitdigital.visualizacao.utilitarios.MoveComponentListener;
 
 @SuppressWarnings("serial")
 public class JDNota extends JDialog{

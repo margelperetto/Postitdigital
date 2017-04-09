@@ -1,4 +1,4 @@
-package br.com.margel.postitdigital.visualizacao.componentes;
+package br.com.margel.postitdigital.visualizacao.utilitarios;
 
 import java.awt.Color;
 import java.awt.Component;
