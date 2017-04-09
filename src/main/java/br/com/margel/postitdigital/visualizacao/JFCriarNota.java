@@ -31,7 +31,7 @@ import br.com.margel.postitdigital.visualizacao.img.ImgUtils;
 public class JFCriarNota extends JFrame{
 	
 	private NotaControle ctrl = new NotaControle();
-	private JButton jbCriarNota = new JButton("Criar Nova Nota");
+	private JButton jbCriarNota = new JButton("Criar Nova Nota",ImgUtils.getImageIcon("load18x18.gif"));
 	private Dimension screenSize;
 	private List<Window> dialogs = new LinkedList<>();
 	
@@ -44,12 +44,13 @@ public class JFCriarNota extends JFrame{
 			}
 		});
 		
-		setLayout(new MigLayout(new LC().insetsAll("40").fill()));
+		setLayout(new MigLayout(new LC().insets("20", "50", "20", "50").fill()));
 		add(jbCriarNota, new CC().alignX("center"));
 		
 		getContentPane().setBackground(new Color(58, 108, 203));
 		
 		pack();
+		setIconImage(ImgUtils.getImageIcon("icon.png").getImage());
 		setMinimumSize(getSize());
 		setTitle("Criar Nota");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -73,6 +74,7 @@ public class JFCriarNota extends JFrame{
 	private void carregarNotas(){
 		jbCriarNota.setEnabled(false);
 		jbCriarNota.setText("Carregando...");
+		jbCriarNota.setIcon(ImgUtils.getImageIcon("load18x18.gif"));
 		new SwingWorker<List<Nota>, Void>() {
 			@Override
 			protected List<Nota> doInBackground() throws Exception {
@@ -89,7 +91,8 @@ public class JFCriarNota extends JFrame{
 					jbCriarNota.setIcon(ImgUtils.getImageIcon("add_nota18x18.png"));
 				} catch (Exception e) {
 					e.printStackTrace();
-					jbCriarNota.setText("Erro!");
+					jbCriarNota.setText("Oops...");
+					jbCriarNota.setIcon(ImgUtils.getImageIcon("error18x18.png"));
 					JOptionPane.showMessageDialog(JFCriarNota.this, 
 							"Não foi possível carregar notas! \n"+e.getMessage(),
 							"Erro",JOptionPane.ERROR_MESSAGE);
