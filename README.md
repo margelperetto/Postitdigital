@@ -8,7 +8,8 @@ A coisa é simples, tipo isso:
 
 ## Para rodar
 ```
-$ git clone [URL]
+$ git clone https://github.com/margelperetto/postitdigital.git
+$ cd postitdigital
 $ mvn package
 $ java -jar target/postitdigital-0.0.1-SNAPSHOT.jar
 ```
